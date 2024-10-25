@@ -57,7 +57,7 @@ const ctx = lienzo.getContext('2d');
 // Dibujar la cabeza
 ctx.arc(150, 100, 50, Math.PI, 0, false); // Cabeza del fantasma
 
-// Dibujar el cuerpo con curvas y líneas
+//  cuerpo 
 ctx.lineTo(200, 180); // Cuerpo izquierdo
 ctx.quadraticCurveTo(175, 210, 150, 180); // Primera curva inferior
 ctx.quadraticCurveTo(125, 210, 100, 180); // Segunda curva inferior
@@ -76,14 +76,14 @@ ctx.fill();
 ctx.strokeStyle = "black"; // Contorno 
 ctx.stroke();
 
-// Dibujar los ojos del fantasma
+// los ojos del fantasma
 ctx.beginPath();
 ctx.arc(135, 90, 10, 0, Math.PI * 2, true); // Ojo izquierdo
 ctx.arc(165, 90, 10, 0, Math.PI * 2, true); // Ojo derecho
 ctx.fillStyle = "black";
 ctx.fill();
 
-// Dibujar la boca del fantasma
+//  la boca del fantasma
 ctx.beginPath();
 ctx.moveTo(140, 110); 
 ctx.lineTo(160, 110); 
@@ -91,33 +91,47 @@ ctx.lineTo(150, 120);
 ctx.closePath();
 ctx.fill();
 
-ctx.fillStyle = 'orange';// cuerpo de la calabaza
+// Cuerpo de la calabaza
+ctx.fillStyle = 'orange';
+
+// Segmento central
 ctx.beginPath();
-ctx.arc(350, 100, 60, 0, Math.PI *2, true);
+ctx.arc(120, 350, 60, 0, Math.PI * 2, true); // Círculo central de la calabaza
 ctx.fill();
 
+// Segmento izquierdo
 ctx.beginPath();
-ctx.arc(320, 90, 10, 0, Math.PI * 2, true); // Ojo izquierdo
-ctx.arc(370, 90, 10, 0, Math.PI * 2, true); // Ojo derecho
+ctx.arc(90, 350, 50, 0, Math.PI * 2, true); // Segmento izquierdo
+ctx.fill();
+
+// Segmento derecho
+ctx.beginPath();
+ctx.arc(150, 350, 50, 0, Math.PI * 2, true); // Segmento derecho
+ctx.fill();
+
+// Ojos de la calabaza
+ctx.beginPath();
+ctx.arc(100, 340, 10, 0, Math.PI * 2, true); // Ojo izquierdo
+ctx.arc(140, 340, 10, 0, Math.PI * 2, true); // Ojo derecho
 ctx.fillStyle = "black";
 ctx.fill();
 
-ctx.beginPath();//como hoja  de la calabza
-ctx.roundRect(320, 20, 20, 20 ,[0,20,0,20]);
+// Hoja de la calabaza
+ctx.fillStyle = 'green';
+ctx.beginPath();
+ctx.roundRect(110, 290, 20, 20, [0, 20, 0, 20]); // Forma de hoja
 ctx.fill();
 ctx.stroke();
 
-ctx.fillStyle = 'red';//nariz de la calabaza 
+// Nariz de la calabaza
+ctx.fillStyle = 'red';
 ctx.beginPath();
-ctx.moveTo(380, 110);
-ctx.lineTo(320, 110);
-ctx.lineTo(350, 130);
+ctx.moveTo(140, 360);
+ctx.lineTo(100, 360);
+ctx.lineTo(120, 380);
 ctx.fill();
 
-
-
-
-// Configuración general
+// Configuración del contorno de la calabaza
 ctx.fillStyle = 'black';
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 2;
@@ -127,21 +141,21 @@ ctx.beginPath();
 ctx.arc(300, 280, 50, 0, Math.PI * 2, true); // Cuerpo redondeado
 ctx.fill();
 
-// Dibujar los ojos (relativos al cuerpo)
+// los ojos de la araña  
 ctx.fillStyle = 'white';
 ctx.beginPath();
 ctx.arc(280, 260, 15, 0, Math.PI * 2, true); // Ojo izquierdo
 ctx.arc(320, 260, 15, 0, Math.PI * 2, true); // Ojo derecho
 ctx.fill();
 
-// Pupilas (relativas a los ojos)
+// Pupilas  de la araña
 ctx.fillStyle = 'black';
 ctx.beginPath();
 ctx.arc(280, 260, 7, 0, Math.PI * 2, true); // Pupila izquierda
 ctx.arc(320, 260, 7, 0, Math.PI * 2, true); // Pupila derecha
 ctx.fill();
 
-// Dibujar sonrisa (relativa al cuerpo)
+// sonrisa de la araña 
 ctx.beginPath();
 ctx.arc(300, 290, 20, 0, Math.PI, false); // Sonrisa
 ctx.stroke();
@@ -152,7 +166,7 @@ ctx.beginPath();
 ctx.arc(300, 295, 7, 0, Math.PI * 2, true); // Pupila izquierda
 ctx.fill();
 
-// Dibujar el sombrero de fantasma
+//  fantasma
 ctx.fillStyle = 'purple';
 ctx.beginPath();
 ctx.moveTo(110, 60);
@@ -163,49 +177,72 @@ ctx.fill(); // Triángulo para la parte delantera
 ctx.fillStyle = 'purple';
 ctx.fillRect(110, 50, 80, 10); // Ala del sombrero
 
-// Dibujar la hebilla del sombrero
+// hebilla del sombrero
 ctx.fillStyle = 'yellow';
 ctx.fillRect(142, 50, 20, 10); // Rectángulo para la hebilla
 
 
-//Patas de la araña izquierda 
-ctx.strokeStyle = 'black';
+//ctx.strokeStyle = 'black';
 ctx.lineWidth = 4;
+
+// Pata izquierda superior
 ctx.beginPath();
-ctx.moveTo(340, 290);
-ctx.lineTo(370, 260);
-ctx.stroke()
+ctx.moveTo(260, 260); // Punto inicial más cercano al cuerpo
+ctx.lineTo(220, 230); // Primera articulación
+ctx.lineTo(180, 260); // Extremo de la pata
+ctx.stroke();
+
+// Pata izquierda media-superior
 ctx.beginPath();
-ctx.moveTo(370, 260);
-ctx.lineTo(410, 290);
-ctx.stroke()
+ctx.moveTo(260, 280);
+ctx.lineTo(220, 270);
+ctx.lineTo(180, 290);
+ctx.stroke();
+
+// Pata izquierda media-inferior
 ctx.beginPath();
-ctx.moveTo(190, 290);
-ctx.lineTo(220, 260);
-ctx.stroke()
+ctx.moveTo(260, 300);
+ctx.lineTo(220, 310);
+ctx.lineTo(180, 350);
+ctx.stroke();
+
+// Pata izquierda inferior
 ctx.beginPath();
-ctx.moveTo(220, 260);
-ctx.lineTo(260, 290);
-ctx.stroke()
-//Patas de la araña derecha 
-ctx.strokeStyle = 'black';
-ctx.lineWidth = 4;
+ctx.moveTo(270, 310);  // Punto inicial más cercano al cuerpo
+ctx.lineTo(250, 330);  // Primera articulación
+ctx.lineTo(230, 370);  // Extremo de la pata
+ctx.stroke();
+
+// Patas de la araña derecha
+
+// Pata derecha superior
 ctx.beginPath();
 ctx.moveTo(340, 260);
-ctx.lineTo(370, 230);
-ctx.stroke()
-ctx.beginPath();
-ctx.moveTo(370, 230);
-ctx.lineTo(410, 260);
-ctx.stroke()
-ctx.beginPath();
-ctx.moveTo(190, 260);
-ctx.lineTo(220, 230);
-ctx.stroke()
-ctx.beginPath();
-ctx.moveTo(220, 230);
-ctx.lineTo(260, 260);
+ctx.lineTo(380, 230);
+ctx.lineTo(420, 260);
 ctx.stroke();
+
+// Pata derecha media-superior
+ctx.beginPath();
+ctx.moveTo(340, 280);
+ctx.lineTo(380, 270);
+ctx.lineTo(420, 290);
+ctx.stroke();
+
+// Pata derecha media-inferior
+ctx.beginPath();
+ctx.moveTo(340, 300);
+ctx.lineTo(380, 310);
+ctx.lineTo(420, 350);
+ctx.stroke();
+
+// Pata derecha inferior
+ctx.beginPath();
+ctx.moveTo(330, 310);  // Punto inicial más cercano al cuerpo
+ctx.lineTo(355, 330);  // Primera articulación
+ctx.lineTo(370, 370);  // Extremo de la pata
+ctx.stroke();
+
 
 
 ctx.fillStyle = 'white';

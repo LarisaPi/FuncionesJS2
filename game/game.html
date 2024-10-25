@@ -16,15 +16,14 @@
             background-color: black;
             color: white;
         }
-        /* Fondo del lienzo */
         #lienzo {
-            background-color: #a3e4db; /* Fondo claro tipo juego */
-            border: 2px solid #333; /* Bordes oscuros para resaltar el contenedor */
+            background-color: #a3e4db; 
+            border: 2px solid #333; 
             display: block;
-            margin: 0 auto; /* Centrar el canvas */
+            margin: 0 auto;
             box-shadow: 0px 0px 15px rgba(229, 231, 162, 0.5); /* Sombra para darle un efecto flotante */
             margin-top: 50px;
-            background-image: url('../imagenes/minas.jpeg'); /* Ruta de la imagen de fondo */
+            background-image: url('../imagenes/minas.jpeg'); /*  imagen de fondo en el lienzo */
             background-size: cover;
             background-position: center;
             animation: moveBackground 20s linear infinite; /* Llama a la animación */
@@ -39,8 +38,6 @@
             }
         }
     
-
-        /* Estilo para el puntaje */
         #scoreDisplay {
             color: #3c32c0;
             font-size: 24px;
@@ -65,8 +62,6 @@
             margin-top: 200px;
             margin-left: 400px;  
         }
-
-        /* Estilo del botón de reiniciar */
         .restartButton {
             padding: 10px 20px;
             font-size: 16px;
@@ -81,23 +76,21 @@
             z-index: 2;
             font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
             transition: all 0.3s ease;
             margin-top: 200px;
             margin-left: 400px;  
         }
 
         .restartButton:hover {
-            background-color: #8ceffa; /* Color más oscuro al hacer hover */
-            transform: scale(1.1); /* Efecto de crecimiento */
+            background-color: #8ceffa; 
+            transform: scale(1.1); 
         
         }
 
         .restartButton:active {
-            transform: scale(1.05); /* Efecto de "clic" */
+            transform: scale(1.05); 
         }
-
-        /* Estilo para un botón "Regresar al inicio" */
         .backButton {
             padding: 10px 20px;
             font-size: 14px;
@@ -112,7 +105,7 @@
             z-index: 2;
             font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
             transition: all 0.3s ease;
         }
 

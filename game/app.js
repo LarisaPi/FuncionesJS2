@@ -116,9 +116,9 @@ function startGame() {
         }
 
         if (direction === 1) x++;
-        else if (direction === 2) x--;
-        else if (direction === 3) y++;
-        else if (direction === 4) y--;
+        else if (direction === 2) y++;
+        else if (direction === 3) x--;
+        else if (direction === 4) y--;//Cordenadas de las flechas 
 
         if (x > 29) x = 0;
         else if (x < 0) x = 29;
